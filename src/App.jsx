@@ -5,16 +5,19 @@ import {
   RouterProvider,
   Route,
   createRoutesFromElements,
+  Routes,
 } from "react-router-dom";
 import Root from "./Routes/Root";
 import Home from "./Pages/Home";
+import SignUp from "./Pages/SignUp";
 
 const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route element={<Root />}>
+      <Route>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/registration" element={<SignUp />} />
       </Route>
     )
   );
